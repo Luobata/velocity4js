@@ -7,12 +7,17 @@
 // TODO 定义数据类型
 
 
-var compile = function (asts) {
-};
+define(function(require, exports, module) {
+    var compile = function (asts) {
+    };
 
-compile.prototype = {
-    constructor: compile
-};
+    compile.prototype = {
+        constructor: compile
+    };
+
+    compile.prototype.render = function (context) {
+    };
 
 
-module.exports = compile;
+    module.exports = compile;
+})

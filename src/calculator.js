@@ -5,22 +5,24 @@
  *
  */
 
-var calculator = {
-    // 加法
-    add: function(numberA, numberB) {
-    },
-    // 减法
-    sub: function(numberA, numberB) {
-    },
-    // 乘法
-    multip: function(numberA, numberB) {
-    },
-    // 除法
-    div: function(numberA, numberB) {
-    },
-    // 取余
-    remain: function(numberA, numberB) {
-    }
-};
+define(function(require, exports, module) {
+    var calculator = {
+        // 加法
+        add: function(numberA, numberB) {
+        },
+        // 减法
+        sub: function(numberA, numberB) {
+        },
+            // 乘法
+        multip: function(numberA, numberB) {
+        },
+            // 除法
+        div: function(numberA, numberB) {
+        },
+            // 取余
+        remain: function(numberA, numberB) {
+        }
+    };
 
-module.exports = calculator;
+    module.exports = calculator;
+})

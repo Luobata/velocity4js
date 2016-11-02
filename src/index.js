@@ -4,22 +4,24 @@
  * @author luobata
  *
  */
-var parse = require('./parse');
-var compile = require('./compile');
-var util = require('./util');
+define(function(require, exports, module) {
+    var parse = require('./parse');
+    var compile = require('./compiler');
+    var util = require('./util');
 
-var Velocity = {
-    parse: parse,
-    Compile: compile,
-    util: util
-};
+    var Velocity = {
+        parse: parse,
+        Compile: compile,
+        util: util
+    };
 
 
-Velocity.render = function(template, context) {
+    Velocity.render = function(template, context) {
 
-    var asts = parse(template);
-    var compile = new Compile(asts);
-    return compile.render(context);
-}
+        var asts = parse(template);
+        var compiler = new compile(asts);
+        return compiler.render(context);
+    }
 
-module.exports = Velocity;
+    module.exports = Velocity;
+})

@@ -5,8 +5,10 @@
  *
  */
 
-var util = {
-    
-};
+define(function(require, exports, module) {
+    var util = {
 
-module.exports = util;
+    };
+
+    module.exports = util;
+})
